@@ -1,0 +1,7 @@
+flask
+torch
+timm
+numpy
+sklearn
+PIL
+pickle
