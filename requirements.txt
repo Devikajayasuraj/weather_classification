@@ -2,8 +2,8 @@ flask
 torch
 timm
 numpy
-scikit-learn==1.3.0
-PIL
+Pillow  # Use Pillow instead of PIL
+scikit-learn==1.3.0  # Ensure compatibility
 pickle
 joblib
 gunicorn
