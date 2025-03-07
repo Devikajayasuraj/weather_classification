@@ -77,5 +77,6 @@ def predict():
 import os
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 10000))  # Render provides the PORT dynamically
-    app.run(host="0.0.0.0", port=port, debug=False)  # Change debug to False for production
+    port = int(os.environ.get("PORT", 10000))  # Get port from Render
+    app.run(host="0.0.0.0", port=port, debug=True)
+
