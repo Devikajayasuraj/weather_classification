@@ -74,5 +74,8 @@ def predict():
     except Exception as e:
         return jsonify({"error": f"Prediction failed: {str(e)}"}), 500
 
+import os
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.getenv("PORT", 10000))  # Render provides the PORT dynamically
+    app.run(host="0.0.0.0", port=port, debug=False)  # Change debug to False for production
